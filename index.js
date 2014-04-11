@@ -26,7 +26,7 @@ module.exports = function(out, rename) {
             targetName = rename;
         }
         if (typeof rename === 'function') {
-            targetName = rename(sourceName);
+            targetName = rename(file.path);
         }
 
         var dest = path.resolve(process.cwd(), out);
